@@ -7,7 +7,10 @@
 
 ## Tabelas:
 ### Name: Itens
-| COD | NOME | QUANTIDADE | CATEGORIA |
+
+| COD | NOME      | QUANTIDADE | CATEGORIA |
+| --- | --------- | ---------- | --------- |
+
 
 Ex:
 
@@ -19,7 +22,10 @@ Ex:
 
 
 ### Name: Emprestimos
+
 | PROTOCOLO | CPF | COD(Nome do Item) | QUANTIDADE | SAIDA | DEVOLUCAO |
+| --------- | --- | ----------------- | ---------- | ----- | --------- |
+
 
 Ex:
 
