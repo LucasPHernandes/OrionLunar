@@ -17,7 +17,7 @@ _______________________________________________________
 | 003 | Monitor Dell 21' |     012    | Periféricos   |
 -------------------------------------------------------
 
-### Name: Imprestimos
+### Name: Emprestimos
 | PROTOCOLO | CPF | COD(Nome do Item) | QUANTIDADE | SAIDA | DEVOLUCAO |
 
 Ex:
