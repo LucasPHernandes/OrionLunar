@@ -1,39 +1,5 @@
 import dearpygui.dearpygui as dpg
 import sqlite3
-
-# def list_items():
-#     conexao = sqlite3.connect("DB/dbOrionLunar.db")
-#     cursor = conexao.cursor()
-
-#     # Selecionar todos os itens da tabela Itens
-#     cursor.execute("SELECT * FROM Itens")
-#     itens = cursor.fetchall()
-    
-#     dpg.delete_item("ver_itens")
-
-#     with dpg.window(tag="ver_itens", label="Ver Itens", width=550, height=250, pos=[150, 150]):
-#         dpg.add_input_text(tag="pesquisar_input", hint="Pesquisar")
-#         dpg.add_button(label="Recarregar Tabela", callback=list_items)
-#         # Exibir os itens
-#         with dpg.table(header_row=True):
-#             # Adicionar cabeçalhos
-#             dpg.add_table_column(label="COD")
-#             dpg.add_table_column(label="NOME")
-#             dpg.add_table_column(label="QUANTIDADE")
-#             dpg.add_table_column(label="CATEGORIA")
-
-#             # Preencher a tabela com os dados recuperados
-#             for item in itens:
-#                 # Adicionar uma nova linha à tabela
-#                 with dpg.table_row():
-#                     # Adicionar células na linha com os valores do item
-#                     dpg.add_text(item[0])  # COD
-#                     dpg.add_text(item[1])  # NOME
-#                     dpg.add_text(item[2])  # QUANTIDADE
-#                     dpg.add_text(item[3])  # CATEGORIA
-
-#         # Fechar a conexão
-#     conexao.close()
     
 def list_items(sender, app_data):
     conexao = sqlite3.connect("DB/dbOrionLunar.db")
