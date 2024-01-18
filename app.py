@@ -9,19 +9,29 @@ def list_items():
     cursor.execute("SELECT * FROM Itens")
     itens = cursor.fetchall()
 
-    # Exibir os itens
-    for item in itens:
-        print(item)
+    with dpg.window(label="Ver Itens"):
+        # Exibir os itens
+        with dpg.table(header_row=True):
+            # Adicionar cabeçalhos
+            dpg.add_table_column(label="COD")
+            dpg.add_table_column(label="NOME")
+            dpg.add_table_column(label="QUANTIDADE")
+            dpg.add_table_column(label="CATEGORIA")
 
-    # Fechar a conexão
+            # Preencher a tabela com os dados recuperados
+            for item in itens:
+                # Adicionar uma nova linha à tabela
+                with dpg.table_row():
+                    # Adicionar células na linha com os valores do item
+                    dpg.add_text(item[0])  # COD
+                    dpg.add_text(item[1])  # NOME
+                    dpg.add_text(item[2])  # QUANTIDADE
+                    dpg.add_text(item[3])  # CATEGORIA
+
+        # Fechar a conexão
     conexao.close()
     
-    with dpg.window(label="Itens em Estoque", width=550, height=350, pos=[150, 150]):
-        with dpg.table(header_row=True):
-            dpg.add_table_column(label="COD")
-            dpg.add_table_column(label="Nome")
-            dpg.add_table_column(label="Quantidade")
-            dpg.add_table_column(label="Categoria")
+    
     
 def add_item():
     conexao = sqlite3.connect("DB/dbOrionLunar.db")
