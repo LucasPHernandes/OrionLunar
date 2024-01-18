@@ -8,8 +8,11 @@ def list_items():
     # Selecionar todos os itens da tabela Itens
     cursor.execute("SELECT * FROM Itens")
     itens = cursor.fetchall()
+    
+    dpg.delete_item("ver_itens")
 
-    with dpg.window(label="Ver Itens"):
+    with dpg.window(tag="ver_itens", label="Ver Itens"):
+        dpg.add_button(label="Recarregar Tabela", callback=list_items)
         # Exibir os itens
         with dpg.table(header_row=True):
             # Adicionar cabeçalhos
