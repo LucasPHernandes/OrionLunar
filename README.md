@@ -25,3 +25,7 @@ Ex:
 | PROTOCOLO | CPF         | COD(Nome do Item) | QUANTIDADE | SAIDA            | DEVOLUCAO |
 |    0001   | 03885826003 |        002        |     001    | 10:06 18/01/2024 |    NÃO    |
 ===========================================================================================
+
+### Name: Pessoas
+Usar informações do LDAP, para pegar o nome e fazer a conferência da quantidade de itens que retirou,
+além de ver se está faltando devolver algo, assim como decidir se pode ter acesso a determinados itens.
