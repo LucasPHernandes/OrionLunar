@@ -68,7 +68,7 @@ dpg.create_context()
 with dpg.window(tag="Main", label="Main Window"):
     
     dpg.add_text(tag="OrionLunar", default_value="OrionLunar")
-    dpg.add_text(tag="description", default_value="Sistema para controle de empréstimo de itens da CTI - FW.")
+    dpg.add_text(tag="description", default_value="Sistema para controle de empréstimo de itens.")
     
     with dpg.group(horizontal=True):
         dpg.add_button(tag="Listar Itens", label="Listar todos os Itens", callback=list_items)
