@@ -1,8 +1,8 @@
 
 # OrionLunar
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/LucasPHernandes/OrionLunar)
+![GitHub Release](https://img.shields.io/github/v/release/LucasPHernandes/OrionLunar?include_prereleases&sort=date&display_name=release)
 ![GitHub License](https://img.shields.io/github/license/LucasPHernandes/OrionLunar)
-![GitHub Release](https://img.shields.io/github/v/release/LucasPHernandes/OrionLunar)
 
 Sistema de inventário de itens, pensado para grandes fluxos, com necessidade de agilidade.
 Inteiramente focado para itens de alta rotabilidade, utilizando-se do DearPyGui como proposta de
