@@ -47,21 +47,36 @@ def list_items(sender, app_data):
                     dpg.add_text(item[3])  # CATEGORI
     
 def add_item():
-    conexao = sqlite3.connect("DB/dbOrionLunar.db")
-    cursor = conexao.cursor()
+    # TODO: Trabalhar na validação dos dados (tudo precisa estar preenchido OBRIGATORIAMENTE)
+    # Limpar a janela existente
+    dpg.delete_item("add_itens_window")
     
-    nome = "Pendrive"
-    quantidade = 10
-    categoria = "Armazenamento"
+    with dpg.window(tag="add_itens_window", label="Adicionar novo Item", width=650, height=150, no_resize=True):
+        dpg.add_text(default_value="Teste")
+        with dpg.group(horizontal=True):
+            with dpg.group():
+                dpg.add_input_text(tag="nome_produto", hint="Nome do Item")
+                dpg.add_input_int(tag="quantidade")
+                with dpg.tooltip(parent="quantidade"):
+                    dpg.add_text("Quantidade de Itens Disponíveis")
+                dpg.add_button(tag="salvar_item", label="Adicionar")
+            with dpg.group():
+                dpg.add_combo(tag="categoria", items=["Áudio e Vídeo", "Ferramental", "Armazenamento"], default_value="Selecione uma Categoria")
+    # conexao = sqlite3.connect("DB/dbOrionLunar.db")
+    # cursor = conexao.cursor()
+    
+    # nome = "Pendrive"
+    # quantidade = 10
+    # categoria = "Armazenamento"
 
-    # Inserir dados na tabela Itens
-    cursor.execute("INSERT INTO Itens (NOME, QUANTIDADE, CATEGORIA) VALUES (?, ?, ?)", (nome, quantidade, categoria))
+    # # Inserir dados na tabela Itens
+    # cursor.execute("INSERT INTO Itens (NOME, QUANTIDADE, CATEGORIA) VALUES (?, ?, ?)", (nome, quantidade, categoria))
 
-    # Commit para salvar as alterações
-    conexao.commit()
+    # # Commit para salvar as alterações
+    # conexao.commit()
 
-    # Fechar a conexão
-    conexao.close()
+    # # Fechar a conexão
+    # conexao.close()
 
 dpg.create_context()
 
